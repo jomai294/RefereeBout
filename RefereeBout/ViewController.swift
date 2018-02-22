@@ -9,7 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var scoreRight = 0
+    var scoreLeft = 0
+    var maxTouch = 5
+    var boutIsOver = false
+    var timeStop = true
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,10 +25,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func printHello() {
-        print("hello")
+    func startBout() {
+        
     }
-
 
 }
 
