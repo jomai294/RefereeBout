@@ -16,9 +16,8 @@ class ViewController: UIViewController {
     var boutIsOver = false
     var timeStop = true
     
-   
-    
-    var timer = Timer()
+    //3 minutes = 180sec
+    var time = 180
     
      //number of cards for left
     var yellowCardLeft = 0
@@ -30,9 +29,11 @@ class ViewController: UIViewController {
     var redCardRight = 0
     var blackCardRight = 0
     
+    @IBOutlet weak var timeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector("countTime"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,10 +45,17 @@ class ViewController: UIViewController {
         if (timeStop) {
             return
         }
-        
+        countTime()
     }
-    func startBout() {
-        
+    
+    
+    func countTime() {
+        if (!timeStop && time > 0) {
+            let minutes = String(time/60)
+            let seconds = String(time % 60)
+            timeLabel.text = minutes + ":" + seconds
+            time = time - 1
+        }
     }
 
 }
