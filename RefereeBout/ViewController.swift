@@ -13,12 +13,14 @@ class ViewController: UIViewController {
     var scoreRight = 0
     var scoreLeft = 0
     var maxTouch = 5
+    
     var boutIsOver = false
+    
     var timeStop = true
     
     //3 minutes = 180sec
     var time = 180
-    
+    var timeCount = 3.0
      //number of cards for left
     var yellowCardLeft = 0
     var redCardLeft = 0
@@ -29,11 +31,13 @@ class ViewController: UIViewController {
     var redCardRight = 0
     var blackCardRight = 0
     
+    
     @IBOutlet weak var timeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector("countTime"), userInfo: nil, repeats: true)
+        timeLabel.text = String(timeCount)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +60,16 @@ class ViewController: UIViewController {
             timeLabel.text = minutes + ":" + seconds
             time = time - 1
         }
+    }
+    
+    func updateTime() {
+        timeCount = timeCount + 0.1
+        //2 places after the decimal
+        timeLabel.text = String(format: "%.2ßf",timeCount)
+    }
+    
+    func doubleTouch() {
+        
     }
 
 }
