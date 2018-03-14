@@ -22,7 +22,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="RefereeBout" id="CQT-kj-mho"/>
+                                    <navigationItem title="RefereeBout" id="CQT-kj-mho">
+                                        <barButtonItem key="rightBarButtonItem" title="..." id="bBd-1E-Uv4"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49W-WN-Tvk">
@@ -50,7 +52,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-LM-DpB">
                                 <rect key="frame" x="30" y="617" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="leftYellow"/>
                                 <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="leftYButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JhC-IY-HX1"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fencer's name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xM8-3W-qHN">
                                 <rect key="frame" x="16" y="122" width="121" height="30"/>
@@ -62,22 +68,38 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-fo-bDg">
                                 <rect key="frame" x="68" y="617" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="leftRed"/>
                                 <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="leftRButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="el2-Nu-sMq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-Fs-FSb">
                                 <rect key="frame" x="175" y="617" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="periodButton"/>
                                 <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="periodButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4K3-gp-9Wf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTG-wN-24B">
                                 <rect key="frame" x="309" y="617" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="rightRed"/>
                                 <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="rightRButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nwi-69-muV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAf-MY-WAq">
                                 <rect key="frame" x="260" y="617" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="rightYellow"/>
                                 <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="rightYButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xiL-gp-hHx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-cv-cYK">
                                 <rect key="frame" x="172" y="122" width="36" height="21"/>
@@ -90,6 +112,9 @@
                                 <rect key="frame" x="143" y="68" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Double Touch"/>
+                                <connections>
+                                    <action selector="doubleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9vm-Dz-xBa"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fencer's name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6V-h1-fB7">
                                 <rect key="frame" x="242" y="122" width="112" height="30"/>
@@ -111,12 +136,47 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="leftRButton" destination="HSf-fo-bDg" id="Ie4-51-De1"/>
+                        <outlet property="leftScoreView" destination="49W-WN-Tvk" id="Hwm-qS-siI"/>
+                        <outlet property="leftYButton" destination="ud6-LM-DpB" id="O6S-nn-Og7"/>
+                        <outlet property="periodButton" destination="SJA-Fs-FSb" id="hv8-fE-6Ak"/>
+                        <outlet property="rightScoreView" destination="bGB-2R-qdQ" id="8Aa-b5-W9a"/>
                         <outlet property="timeLabel" destination="cty-03-HfC" id="sFR-jn-zFP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16.800000000000001" y="82.3088455772114"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="92M-Rr-lsU">
+            <objects>
+                <viewController id="FX1-4k-QFI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6rJ-zH-RAe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oIT-32-A6U"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egu-jd-d6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="-205"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="agJ-Mt-iz9">
+            <objects>
+                <viewController id="Soh-wH-Ppu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OSX-3g-uT0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3jh-og-kUR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev7-I2-pdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="584"/>
         </scene>
     </scenes>
 </document>
