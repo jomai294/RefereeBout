@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         leftScoreView.text = String(0)
         rightScoreView.text = String(0)
-        timeLabel.text = String(timeCount)
+        timeLabel.text = String(timerFormat(t: time))
         
     }
 
@@ -68,13 +68,14 @@ class ViewController: UIViewController {
     }
     func countTime() {
         if (timeStop) {
-            let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+            let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
         }
     }
     
     @objc func updateTime() {
-        time -= 0.01
-        timeLabel.text = String(time)
+        time -= 0.1
+        let timeString = timerFormat(t: time)
+        timeLabel.text = String(timeString)
     }
     
     func doubleTouch() {
@@ -118,6 +119,12 @@ class ViewController: UIViewController {
     
     func pauseTimer() {
         
+    }
+    
+    private func timerFormat(t: Double) -> String {
+        let minutes = Int(t / 60)
+        let seconds = Int(Int(t) % 60)
+        return String(minutes) + ":" + String(seconds)
     }
     
 }
