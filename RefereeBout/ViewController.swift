@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var period = 1
     
     //3 minutes = 180sec
-    var time = 180
+    var time = 180.0
     var timeCount = 3.0
      //number of cards for left
     var yellowCardLeft = 0
@@ -54,9 +54,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
-        if (timeStop) {
-            return
-        }
         countTime()
     }
     
@@ -70,18 +67,14 @@ class ViewController: UIViewController {
         }
     }
     func countTime() {
-        if (!timeStop && time > 0) {
-            let minutes = String(time/60)
-            let seconds = String(time % 60)
-            timeLabel.text = minutes + ":" + seconds
-            time = time - 1
+        if (timeStop) {
+            let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
         }
     }
     
-    func updateTime() {
-        timeCount = timeCount + 0.1
-        //2 places after the decimal
-        timeLabel.text = String(format: "%.2ßf",timeCount)
+    @objc func updateTime() {
+        time -= 0.01
+        timeLabel.text = String(time)
     }
     
     func doubleTouch() {
@@ -91,8 +84,41 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func yellowLeftButton(_ sender: Any) {
+        yellowCardLeft += 1
+        print(yellowCardLeft)
+    }
+    
+    @IBAction func redLeftButton(_ sender: Any) {
+        redCardLeft += 1
+        print(redCardLeft)
+    }
+    
+    @IBAction func periodButton(_ sender: Any) {
+        period += 1
+    }
+    
+    @IBAction func yellowRightButton(_ sender: Any) {
+        yellowCardRight += 1
+        print(yellowCardRight)
+    }
+    
+    @IBAction func redRightButton(_ sender: Any) {
+        redCardRight += 1
+        print(redCardRight)
+    }
+    
     func reset() {
+        period = 1
+        yellowCardRight = 0
+        redCardRight = 0
+        yellowCardLeft = 0
+        redCardLeft = 0
+    }
+    
+    func pauseTimer() {
         
     }
+    
 }
 

@@ -55,7 +55,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="leftYellow"/>
                                 <state key="normal" title="0"/>
                                 <connections>
-                                    <action selector="leftYButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JhC-IY-HX1"/>
+                                    <action selector="yellowLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaP-Vp-MzK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fencer's name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xM8-3W-qHN">
@@ -71,7 +71,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="leftRed"/>
                                 <state key="normal" title="0"/>
                                 <connections>
-                                    <action selector="leftRButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="el2-Nu-sMq"/>
+                                    <action selector="redLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mm5-Tr-EtR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-Fs-FSb">
@@ -80,7 +80,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="periodButton"/>
                                 <state key="normal" title="1"/>
                                 <connections>
-                                    <action selector="periodButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4K3-gp-9Wf"/>
+                                    <action selector="periodButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bds-1R-wOp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTG-wN-24B">
@@ -89,7 +89,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="rightRed"/>
                                 <state key="normal" title="0"/>
                                 <connections>
-                                    <action selector="rightRButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nwi-69-muV"/>
+                                    <action selector="redRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngc-ie-rDd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAf-MY-WAq">
@@ -98,7 +98,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="rightYellow"/>
                                 <state key="normal" title="0"/>
                                 <connections>
-                                    <action selector="rightYButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xiL-gp-hHx"/>
+                                    <action selector="yellowRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ytx-L8-sAH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-cv-cYK">
@@ -136,10 +136,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="leftRButton" destination="HSf-fo-bDg" id="Ie4-51-De1"/>
                         <outlet property="leftScoreView" destination="49W-WN-Tvk" id="Hwm-qS-siI"/>
-                        <outlet property="leftYButton" destination="ud6-LM-DpB" id="O6S-nn-Og7"/>
-                        <outlet property="periodButton" destination="SJA-Fs-FSb" id="hv8-fE-6Ak"/>
                         <outlet property="rightScoreView" destination="bGB-2R-qdQ" id="8Aa-b5-W9a"/>
                         <outlet property="timeLabel" destination="cty-03-HfC" id="sFR-jn-zFP"/>
                     </connections>
