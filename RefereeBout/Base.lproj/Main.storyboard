@@ -44,9 +44,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-u9-rMg">
                                 <rect key="frame" x="25" y="366" width="324" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                                <accessibility key="accessibilityConfiguration" identifier="startButton"/>
+                                <state key="normal" title="Resume"/>
                                 <connections>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgP-XR-f8v"/>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiZ-cX-ksT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-LM-DpB">
@@ -138,6 +139,7 @@
                     <connections>
                         <outlet property="leftScoreView" destination="49W-WN-Tvk" id="Hwm-qS-siI"/>
                         <outlet property="rightScoreView" destination="bGB-2R-qdQ" id="8Aa-b5-W9a"/>
+                        <outlet property="start" destination="PXy-u9-rMg" id="Rx7-PF-Xfv"/>
                         <outlet property="timeLabel" destination="cty-03-HfC" id="sFR-jn-zFP"/>
                     </connections>
                 </viewController>

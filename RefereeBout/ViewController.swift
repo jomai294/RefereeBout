@@ -18,10 +18,10 @@ class ViewController: UIViewController {
     var boutIsOver = false
     var priority: Bool?
     var whoHasPriority: Int?
-    var timeStop = true
     var period = 1
     
     //3 minutes = 180sec
+    var timer: Timer?
     var time = 180.0
     var timeCount = 3.0
      //number of cards for left
@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         leftScoreView.text = String(0)
         rightScoreView.text = String(0)
         timeLabel.text = String(timerFormat(t: time))
+        start.setTitle("Start bout", for: .normal)
         
     }
 
@@ -54,8 +55,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
-        countTime()
+        
+        
+        if (timer == nil) {
+            start.setTitle("Pause time", for: .normal)
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+        } else {
+            start.setTitle("Resume", for: .normal)
+            timer?.invalidate()
+            timer = nil
+        }
     }
+    
+    @IBOutlet weak var start: UIButton!
     
     func determinePriority() {
         let randomNum = (Int)(arc4random() * 2)
@@ -66,11 +78,11 @@ class ViewController: UIViewController {
             whoHasPriority = 0
         }
     }
-    func countTime() {
-        if (timeStop) {
-            let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
-        }
-    }
+//    func countTime() {
+//        if (timer == nil) {
+//            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+//        }
+//    }
     
     @objc func updateTime() {
         time -= 0.1
@@ -117,15 +129,18 @@ class ViewController: UIViewController {
         redCardLeft = 0
     }
     
-    func pauseTimer() {
-        
-    }
-    
+//    func pauseTimer() {
+//        if timer != nil {
+//            timer?.invalidate()
+//            timer = nil
+//        }
+//    }
     private func timerFormat(t: Double) -> String {
         let minutes = Int(t / 60)
         let seconds = Int(Int(t) % 60)
         return String(minutes) + ":" + String(seconds)
     }
+    
     
 }
 
