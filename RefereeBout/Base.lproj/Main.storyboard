@@ -116,7 +116,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Double Touch"/>
                                 <connections>
-                                    <action selector="doubleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9vm-Dz-xBa"/>
+                                    <action selector="doubleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Hc-FH-eY8"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fencer's name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6V-h1-fB7">

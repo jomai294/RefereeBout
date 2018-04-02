@@ -109,7 +109,10 @@ class ViewController: UIViewController {
         if ((maxTouch == 5 && scoreLeft != 4 && scoreRight != 4 ) || (maxTouch == 15 && scoreLeft != 14 && scoreRight != 14)) {
             scoreLeft += 1
             scoreRight += 1
+            leftScoreView.text = String(scoreLeft)
+            rightScoreView.text = String(scoreRight)
         }
+        
     }
     
     @IBAction func yellowLeftButton(_ sender: Any) {
@@ -158,6 +161,9 @@ class ViewController: UIViewController {
         return String(minutes) + ":" + String(seconds)
     }
     
+    @IBAction func doubleButton(_ sender: Any) {
+        doubleTouch()
+    }
     
 }
 
