@@ -78,11 +78,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var start: UIButton!
     
     @objc func tapFunction(sender:UITapGestureRecognizer) {
-        
+        scoreLeft += 1
+        leftScoreView.text = String(scoreLeft)
     }
     
     @objc func tapFuncRight(sender:UITapGestureRecognizer) {
-        print("tap right")
+        scoreRight += 1
+        rightScoreView.text = String(scoreRight)
     }
     func determinePriority() {
         let randomNum = (Int)(arc4random() * 2)
@@ -106,13 +108,10 @@ class ViewController: UIViewController {
     }
     
     func doubleTouch() {
-        if ((maxTouch == 5 && scoreLeft != 4 && scoreRight != 4 ) || (maxTouch == 15 && scoreLeft != 14 && scoreRight != 14)) {
             scoreLeft += 1
             scoreRight += 1
             leftScoreView.text = String(scoreLeft)
             rightScoreView.text = String(scoreRight)
-        }
-        
     }
     
     @IBAction func yellowLeftButton(_ sender: Any) {
