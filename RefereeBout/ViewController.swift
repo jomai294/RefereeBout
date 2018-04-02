@@ -46,6 +46,14 @@ class ViewController: UIViewController {
         rightScoreView.text = String(0)
         timeLabel.text = String(timerFormat(t: time))
         start.setTitle("Start bout", for: .normal)
+        //allows the left score view controller to be tapped
+        let tap1 = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapFunction))
+        leftScoreView.isUserInteractionEnabled = true
+        leftScoreView.addGestureRecognizer(tap1)
+        //allows the right score view controller to be tapped
+        let tap2 = UITapGestureRecognizer(target:self, action: #selector(ViewController.tapFuncRight))
+        rightScoreView.isUserInteractionEnabled = true
+        rightScoreView.addGestureRecognizer(tap2)
         
     }
 
@@ -69,6 +77,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var start: UIButton!
     
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+        
+    }
+    
+    @objc func tapFuncRight(sender:UITapGestureRecognizer) {
+        print("tap right")
+    }
     func determinePriority() {
         let randomNum = (Int)(arc4random() * 2)
         //1 is equal to left, 0 is equal to right
@@ -120,13 +135,15 @@ class ViewController: UIViewController {
         redCardRight += 1
         print(redCardRight)
     }
-    
+    //function resets everything to 0.
     func reset() {
         period = 1
         yellowCardRight = 0
         redCardRight = 0
         yellowCardLeft = 0
         redCardLeft = 0
+        scoreLeft = 0
+        scoreRight = 0
     }
     
 //    func pauseTimer() {
