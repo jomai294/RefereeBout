@@ -139,8 +139,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="leftRedButton" destination="HSf-fo-bDg" id="6nP-bE-jqr"/>
                         <outlet property="leftScoreView" destination="49W-WN-Tvk" id="Hwm-qS-siI"/>
+                        <outlet property="leftYellowButton" destination="ud6-LM-DpB" id="jpT-SK-T99"/>
+                        <outlet property="rightRedButton" destination="FTG-wN-24B" id="hje-Bz-cfU"/>
                         <outlet property="rightScoreView" destination="bGB-2R-qdQ" id="8Aa-b5-W9a"/>
+                        <outlet property="rightYellowButton" destination="vAf-MY-WAq" id="o5U-yr-cb4"/>
                         <outlet property="start" destination="PXy-u9-rMg" id="Rx7-PF-Xfv"/>
                         <outlet property="timeLabel" destination="cty-03-HfC" id="sFR-jn-zFP"/>
                     </connections>

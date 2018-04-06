@@ -86,6 +86,15 @@ class ViewController: UIViewController {
         scoreRight += 1
         rightScoreView.text = String(scoreRight)
     }
+    
+    private func awardTouchLeft() {
+        scoreLeft += 1
+        leftScoreView.text = String(scoreLeft)
+    }
+    private func awardTouchRight() {
+        scoreRight += 1
+        rightScoreView.text = String(scoreRight)
+    }
     func determinePriority() {
         let randomNum = (Int)(arc4random() * 2)
         //1 is equal to left, 0 is equal to right
@@ -115,13 +124,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func yellowLeftButton(_ sender: Any) {
-        yellowCardLeft += 1
-        print(yellowCardLeft)
+        giveYellowLeft()
     }
-    
-    @IBAction func redLeftButton(_ sender: Any) {
+    func giveYellowLeft() {
+        if (yellowCardLeft > 0) {
+            giveRedLeft()
+        } else {
+            yellowCardLeft += 1
+            leftYellowButton.setTitle(String(yellowCardLeft), for: .normal)
+        }
+    }
+    func giveRedLeft() {
         redCardLeft += 1
-        print(redCardLeft)
+        awardTouchRight()
+        leftRedButton.setTitle(String(redCardLeft), for: .normal)
+    }
+    func giveYellowRight() {
+        if (yellowCardRight > 0) {
+            redRightButton(self)
+        } else {
+            yellowCardRight += 1
+            rightYellowButton.setTitle(String(yellowCardRight), for: .normal)
+        }
+    }
+    func giveRedRight() {
+        redCardRight += 1
+        awardTouchLeft()
+        rightRedButton.setTitle(String(redCardRight), for: .normal)
+    }
+    @IBAction func redLeftButton(_ sender: Any) {
+        giveRedLeft()
     }
     
     @IBAction func periodButton(_ sender: Any) {
@@ -129,14 +161,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func yellowRightButton(_ sender: Any) {
-        yellowCardRight += 1
-        print(yellowCardRight)
+//        print(yellowCardRight)
+        giveYellowRight()
     }
+    //penalty on right
+    @IBOutlet weak var rightYellowButton: UIButton!
+    @IBOutlet weak var rightRedButton: UIButton!
+    
+    //penalty on left
+    @IBOutlet weak var leftYellowButton: UIButton!
+    @IBOutlet weak var leftRedButton: UIButton!
     
     @IBAction func redRightButton(_ sender: Any) {
-        redCardRight += 1
-        print(redCardRight)
+        giveRedRight()
+        //print(redCardRight)
     }
+    
     //function resets everything to 0.
     func reset() {
         period = 1
