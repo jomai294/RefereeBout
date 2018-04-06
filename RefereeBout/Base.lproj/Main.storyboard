@@ -156,7 +156,7 @@
         <!--View Controller-->
         <scene sceneID="92M-Rr-lsU">
             <objects>
-                <viewController id="FX1-4k-QFI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yellowCardView" id="FX1-4k-QFI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6rJ-zH-RAe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
         <!--View Controller-->
         <scene sceneID="lJZ-Vy-5Ty">
             <objects>
-                <viewController id="Age-ql-Ow3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blackCardView" id="Age-ql-Ow3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JQ9-fC-avd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +186,7 @@
         <!--View Controller-->
         <scene sceneID="agJ-Mt-iz9">
             <objects>
-                <viewController id="Soh-wH-Ppu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="redCardView" id="Soh-wH-Ppu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OSX-3g-uT0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
