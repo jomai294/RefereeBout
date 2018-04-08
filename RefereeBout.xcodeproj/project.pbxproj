@@ -14,6 +14,7 @@
 		52718120203EBC0C00FD282B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5271811E203EBC0C00FD282B /* LaunchScreen.storyboard */; };
 		52EE74D42079F3AC004E5655 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE74D32079F3AC004E5655 /* YellowViewController.swift */; };
 		52EE74D62079F488004E5655 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE74D52079F488004E5655 /* RedViewController.swift */; };
+		52EE74D82079F61E004E5655 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE74D72079F61E004E5655 /* BlackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		52718121203EBC0C00FD282B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EE74D32079F3AC004E5655 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		52EE74D52079F488004E5655 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		52EE74D72079F61E004E5655 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5271811E203EBC0C00FD282B /* LaunchScreen.storyboard */,
 				52718121203EBC0C00FD282B /* Info.plist */,
 				52EE74D52079F488004E5655 /* RedViewController.swift */,
+				52EE74D72079F61E004E5655 /* BlackViewController.swift */,
 			);
 			path = RefereeBout;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				52EE74D62079F488004E5655 /* RedViewController.swift in Sources */,
 				52718118203EBC0C00FD282B /* ViewController.swift in Sources */,
 				52EE74D42079F3AC004E5655 /* YellowViewController.swift in Sources */,
+				52EE74D82079F61E004E5655 /* BlackViewController.swift in Sources */,
 				52718116203EBC0C00FD282B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

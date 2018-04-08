@@ -1,18 +1,19 @@
 //
-//  RedViewController.swift
+//  BlackViewController.swift
 //  RefereeBout
 //
-//  Created by John Mai on 4/7/18.
+//  Created by John Mai on 4/8/18.
 //  Copyright © 2018 John. All rights reserved.
 //
 
 import UIKit
 
-class RedViewController: UIViewController {
+class BlackViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+        
         // Do any additional setup after loading the view.
     }
 
