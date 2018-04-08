@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         rightScoreView.isUserInteractionEnabled = true
         rightScoreView.addGestureRecognizer(tap2)
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -163,6 +164,7 @@ class ViewController: UIViewController {
     @IBAction func yellowRightButton(_ sender: Any) {
 //        print(yellowCardRight)
         giveYellowRight()
+        
     }
     //penalty on right
     @IBOutlet weak var rightYellowButton: UIButton!
