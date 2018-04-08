@@ -13,6 +13,12 @@ class YellowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 0, alpha: 1.0)
+//        performAfter(delay: 2) {
+//            print("task to be done")
+//        }
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
+            self.view.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +26,11 @@ class YellowViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+//    func performAfter(delay: TimeInterval, completion: @escaping () -> Void) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+//            completion()
+//        }
+//    }
 
     /*
     // MARK: - Navigation

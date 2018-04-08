@@ -10,10 +10,12 @@ import UIKit
 
 class BlackViewController: UIViewController {
 
+    @IBOutlet weak var BlackCardLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
-        
+        BlackCardLabel.text = "Black Card"
+        BlackCardLabel.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
         // Do any additional setup after loading the view.
     }
 
