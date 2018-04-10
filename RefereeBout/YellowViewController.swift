@@ -18,6 +18,8 @@ class YellowViewController: UIViewController {
 //        }
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
             self.view.isHidden = true
+            self.performSegue(withIdentifier: "toMainYellow", sender: self)
+            
         }
         // Do any additional setup after loading the view.
     }

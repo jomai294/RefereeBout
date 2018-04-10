@@ -138,6 +138,7 @@ class ViewController: UIViewController {
     func giveRedLeft() {
         redCardLeft += 1
         awardTouchRight()
+        performSegue(withIdentifier: "toRed", sender: self)
         leftRedButton.setTitle(String(redCardLeft), for: .normal)
     }
     func giveYellowRight() {
@@ -207,4 +208,13 @@ class ViewController: UIViewController {
     }
     
 }
+//extension AppDelegate {
+//    static var shared: AppDelegate {
+//        return UIApplication.shared.delegate as! AppDelegate
+//    
+//    }
+//    var rootViewController: RootViewController {
+//        return window!.rootViewController as! RootViewController
+//    }
+//}
 

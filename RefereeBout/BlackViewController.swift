@@ -16,6 +16,9 @@ class BlackViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
         BlackCardLabel.text = "Black Card"
         BlackCardLabel.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
+            self.view.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
 
