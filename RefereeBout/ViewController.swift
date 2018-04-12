@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     //3 minutes = 180sec
     var timer: Timer?
     var time = 180.0
-    var timeCount = 3.0
+    //var timeCount = 3.0
      //number of cards for left
     var yellowCardLeft = 0
     var redCardLeft = 0
@@ -33,7 +33,6 @@ class ViewController: UIViewController {
     var yellowCardRight = 0
     var redCardRight = 0
     var blackCardRight = 0
-    
     
     @IBOutlet weak var leftScoreView: UILabel!
     @IBOutlet weak var rightScoreView: UILabel!
@@ -57,14 +56,21 @@ class ViewController: UIViewController {
         
         
     }
-
+//    override func viewWillAppear(_ animated: Bool) {
+//        //how you save the data
+//        let userDefaults = Foundation.UserDefaults.standard
+//        let value = userDefaults.string(forKey: "Key")
+//        time = Double(value!)!
+//        timeLabel.text = timerFormat(t: time)
+//
+//
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func startButton(_ sender: Any) {
-        
         
         if (timer == nil) {
             start.setTitle("Pause time", for: .normal)
@@ -73,6 +79,9 @@ class ViewController: UIViewController {
             start.setTitle("Resume", for: .normal)
             timer?.invalidate()
             timer = nil
+            //in case the view disappears it will reload
+            
+            //giveYellowLeft()
         }
     }
     
@@ -125,12 +134,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func yellowLeftButton(_ sender: Any) {
+        let savedTime = time
+        let userDefaults = Foundation.UserDefaults.standard
+        userDefaults.set(savedTime, forKey: "Key")
         giveYellowLeft()
     }
     func giveYellowLeft() {
         if (yellowCardLeft > 0) {
             giveRedLeft()
         } else {
+            performSegue(withIdentifier: "toYellow", sender: self)
             yellowCardLeft += 1
             leftYellowButton.setTitle(String(yellowCardLeft), for: .normal)
         }
@@ -143,8 +156,9 @@ class ViewController: UIViewController {
     }
     func giveYellowRight() {
         if (yellowCardRight > 0) {
-            redRightButton(self)
+            giveRedRight()
         } else {
+            performSegue(withIdentifier: "toYellow", sender: self)
             yellowCardRight += 1
             rightYellowButton.setTitle(String(yellowCardRight), for: .normal)
         }
@@ -152,6 +166,7 @@ class ViewController: UIViewController {
     func giveRedRight() {
         redCardRight += 1
         awardTouchLeft()
+        performSegue(withIdentifier: "toRed", sender: self)
         rightRedButton.setTitle(String(redCardRight), for: .normal)
     }
     @IBAction func redLeftButton(_ sender: Any) {
@@ -177,7 +192,6 @@ class ViewController: UIViewController {
     
     @IBAction func redRightButton(_ sender: Any) {
         giveRedRight()
-        //print(redCardRight)
     }
     
     //function resets everything to 0.
@@ -189,18 +203,13 @@ class ViewController: UIViewController {
         redCardLeft = 0
         scoreLeft = 0
         scoreRight = 0
+        time = 180.0
     }
     
-//    func pauseTimer() {
-//        if timer != nil {
-//            timer?.invalidate()
-//            timer = nil
-//        }
-//    }
-    private func timerFormat(t: Double) -> String {
+    func timerFormat(t: Double) -> String {
         let minutes = Int(t / 60)
         let seconds = Int(Int(t) % 60)
-        return String(minutes) + ":" + String(seconds)
+        return String(format: "%01i:%02i", minutes,seconds)
     }
     
     @IBAction func doubleButton(_ sender: Any) {
@@ -208,13 +217,5 @@ class ViewController: UIViewController {
     }
     
 }
-//extension AppDelegate {
-//    static var shared: AppDelegate {
-//        return UIApplication.shared.delegate as! AppDelegate
-//    
-//    }
-//    var rootViewController: RootViewController {
-//        return window!.rootViewController as! RootViewController
-//    }
-//}
+
 

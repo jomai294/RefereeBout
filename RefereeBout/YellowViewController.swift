@@ -17,8 +17,8 @@ class YellowViewController: UIViewController {
 //            print("task to be done")
 //        }
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
-            self.view.isHidden = true
-            self.performSegue(withIdentifier: "toMainYellow", sender: self)
+            
+            self.dismiss(animated: true, completion: nil)
             
         }
         // Do any additional setup after loading the view.

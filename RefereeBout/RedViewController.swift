@@ -14,8 +14,9 @@ class RedViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1.0)
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
-            self.view.isHidden = true
-            self.performSegue(withIdentifier: "toMainRed", sender: self)
+//            self.view.isHidden = true
+//            self.performSegue(withIdentifier: "toMainRed", sender: self)
+            self.dismiss(animated: true, completion: nil)
         }
         
         // Do any additional setup after loading the view.
