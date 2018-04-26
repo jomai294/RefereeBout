@@ -38,6 +38,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightScoreView: UILabel!
     
     @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBAction func onMoreTapped() {
+        print("Toggle")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -214,6 +218,10 @@ class ViewController: UIViewController {
     
     @IBAction func doubleButton(_ sender: Any) {
         doubleTouch()
+    }
+    
+    @IBAction func settingsButton(_ sender: Any) {
+        print("Toggle sideview")
     }
     
 }
