@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     
     @IBAction func onMoreTapped() {
         print("Toggle")
+        NotificationCenter.default.post(name: NSNotification.Name("Toggle Side Menu"), object: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

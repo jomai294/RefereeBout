@@ -12,6 +12,8 @@
 		5271811B203EBC0C00FD282B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52718119203EBC0C00FD282B /* Main.storyboard */; };
 		5271811D203EBC0C00FD282B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5271811C203EBC0C00FD282B /* Assets.xcassets */; };
 		52718120203EBC0C00FD282B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5271811E203EBC0C00FD282B /* LaunchScreen.storyboard */; };
+		52949EC92091CC2F0055D700 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52949EC82091CC2F0055D700 /* SideMenuVC.swift */; };
+		52949ECB2091CCDB0055D700 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52949ECA2091CCDB0055D700 /* ContainerViewController.swift */; };
 		52EE74D42079F3AC004E5655 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE74D32079F3AC004E5655 /* YellowViewController.swift */; };
 		52EE74D62079F488004E5655 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE74D52079F488004E5655 /* RedViewController.swift */; };
 		52EE74D82079F61E004E5655 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE74D72079F61E004E5655 /* BlackViewController.swift */; };
@@ -25,6 +27,8 @@
 		5271811C203EBC0C00FD282B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5271811F203EBC0C00FD282B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52718121203EBC0C00FD282B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52949EC82091CC2F0055D700 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		52949ECA2091CCDB0055D700 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		52EE74D32079F3AC004E5655 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		52EE74D52079F488004E5655 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		52EE74D72079F61E004E5655 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				52718121203EBC0C00FD282B /* Info.plist */,
 				52EE74D52079F488004E5655 /* RedViewController.swift */,
 				52EE74D72079F61E004E5655 /* BlackViewController.swift */,
+				52949EC82091CC2F0055D700 /* SideMenuVC.swift */,
+				52949ECA2091CCDB0055D700 /* ContainerViewController.swift */,
 			);
 			path = RefereeBout;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			files = (
 				52EE74D62079F488004E5655 /* RedViewController.swift in Sources */,
 				52718118203EBC0C00FD282B /* ViewController.swift in Sources */,
+				52949ECB2091CCDB0055D700 /* ContainerViewController.swift in Sources */,
+				52949EC92091CC2F0055D700 /* SideMenuVC.swift in Sources */,
 				52EE74D42079F3AC004E5655 /* YellowViewController.swift in Sources */,
 				52EE74D82079F61E004E5655 /* BlackViewController.swift in Sources */,
 				52718116203EBC0C00FD282B /* AppDelegate.swift in Sources */,

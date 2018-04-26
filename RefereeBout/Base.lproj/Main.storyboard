@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Side MenuVC-->
         <scene sceneID="27Z-3Q-Pot">
             <objects>
-                <tableViewController id="GmA-Zw-FBo" sceneMemberID="viewController">
+                <tableViewController id="GmA-Zw-FBo" customClass="SideMenuVC" customModule="RefereeBout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i75-Ui-37h">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="-1662.4000000000001" y="321.58920539730138"/>
         </scene>
-        <!--View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="ZlY-3J-Yot">
             <objects>
-                <viewController id="Iws-Zi-6rD" sceneMemberID="viewController">
+                <viewController id="Iws-Zi-6rD" customClass="ContainerViewController" customModule="RefereeBout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Sp-uB-iMj"/>
                         <viewControllerLayoutGuide type="bottom" id="yiM-4p-eeE"/>
@@ -121,12 +121,15 @@
                             <constraint firstItem="yiM-4p-eeE" firstAttribute="top" secondItem="iEd-Ic-Ho9" secondAttribute="bottom" id="9Lh-Lj-mp6"/>
                             <constraint firstItem="yiM-4p-eeE" firstAttribute="top" secondItem="n0N-kY-XaM" secondAttribute="bottom" id="Rr2-Ry-ukq"/>
                             <constraint firstItem="iEd-Ic-Ho9" firstAttribute="top" secondItem="dwt-O5-POz" secondAttribute="top" id="ZmY-5k-HNW"/>
-                            <constraint firstAttribute="trailing" secondItem="iEd-Ic-Ho9" secondAttribute="trailing" id="aUb-rb-jO9"/>
                             <constraint firstItem="iEd-Ic-Ho9" firstAttribute="leading" secondItem="n0N-kY-XaM" secondAttribute="trailing" id="faS-1a-6Ni"/>
+                            <constraint firstItem="iEd-Ic-Ho9" firstAttribute="width" secondItem="dwt-O5-POz" secondAttribute="width" id="hb5-YH-06k"/>
                             <constraint firstItem="n0N-kY-XaM" firstAttribute="leading" secondItem="dwt-O5-POz" secondAttribute="leading" constant="-240" id="jrh-aG-Gdy"/>
                             <constraint firstItem="n0N-kY-XaM" firstAttribute="top" secondItem="dwt-O5-POz" secondAttribute="top" id="n4W-2L-uyS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sideMenuConstraint" destination="jrh-aG-Gdy" id="9wx-CM-w1x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sh7-VJ-g7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
