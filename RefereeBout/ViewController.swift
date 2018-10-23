@@ -34,6 +34,11 @@ class ViewController: UIViewController {
     var redCardRight = 0
     var blackCardRight = 0
     
+    //break
+    var breakTimer: Timer?
+    var breakTime = 60.0
+    
+    
     @IBOutlet weak var leftScoreView: UILabel!
     @IBOutlet weak var rightScoreView: UILabel!
     
@@ -77,16 +82,24 @@ class ViewController: UIViewController {
     
     @IBAction func startButton(_ sender: Any) {
         
-        if (timer == nil) {
-            start.setTitle("Pause time", for: .normal)
-            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+        if (time > 0 ) {
+            if (timer == nil) {
+                start.setTitle("Pause time", for: .normal)
+                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+            } else {
+                start.setTitle("Resume", for: .normal)
+                timer?.invalidate()
+                timer = nil
+                //in case the view disappears it will reload
+                
+                //giveYellowLeft()
+            }
         } else {
-            start.setTitle("Resume", for: .normal)
-            timer?.invalidate()
-            timer = nil
-            //in case the view disappears it will reload
-            
-            //giveYellowLeft()
+            if (scoreRight == scoreLeft) {
+                determinePriority()
+            } else {
+                
+            }
         }
     }
     
@@ -111,6 +124,7 @@ class ViewController: UIViewController {
         rightScoreView.text = String(scoreRight)
     }
     func determinePriority() {
+        
         let randomNum = (Int)(arc4random() * 2)
         //1 is equal to left, 0 is equal to right
         if (randomNum == 1) {
@@ -126,9 +140,13 @@ class ViewController: UIViewController {
 //    }
     
     @objc func updateTime() {
-        time -= 0.1
-        let timeString = timerFormat(t: time)
-        timeLabel.text = String(timeString)
+        if (time > 0) {
+            //time -= 0.1
+            //for testing
+            time -= 1
+            let timeString = timerFormat(t: time)
+            timeLabel.text = String(timeString)
+        }
     }
     
     func doubleTouch() {
@@ -224,6 +242,8 @@ class ViewController: UIViewController {
     @IBAction func settingsButton(_ sender: Any) {
         print("Toggle sideview")
     }
+    
+    
     
 }
 
