@@ -98,6 +98,11 @@ class ViewController: UIViewController {
             if (scoreRight == scoreLeft) {
                 determinePriority()
             } else {
+                //should prompt user with alert with the score
+                let alert = UIAlertController(title: "endBout", message: String(scoreLeft) + "-" + String(scoreRight),preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
                 
             }
         }
@@ -146,6 +151,14 @@ class ViewController: UIViewController {
             time -= 1
             let timeString = timerFormat(t: time)
             timeLabel.text = String(timeString)
+        }
+        if (time <= 0 && scoreLeft == scoreRight) {
+            determinePriority()
+        } else if (time <= 0) {
+            let alert = UIAlertController(title: "endBout", message: String(scoreLeft) + " - " + String(scoreRight), preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
