@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     var boutIsOver = false
     var priority: Bool?
-    var whoHasPriority: Int?
+    var whoHasPriority: String?
     var period = 1
     
     //3 minutes = 180sec
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     
     @IBAction func startButton(_ sender: Any) {
         
-        if (time > 0 ) {
+        if (time >= 0 ) {
             if (timer == nil) {
                 start.setTitle("Pause time", for: .normal)
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
@@ -94,18 +94,7 @@ class ViewController: UIViewController {
                 
                 //giveYellowLeft()
             }
-        } else {
-            if (scoreRight == scoreLeft) {
-                determinePriority()
-            } else {
-                //should prompt user with alert with the score
-                let alert = UIAlertController(title: "endBout", message: String(scoreLeft) + "-" + String(scoreRight),preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-                
-                self.present(alert, animated: true, completion: nil)
-                
-            }
-        }
+        } 
     }
     
     @IBOutlet weak var start: UIButton!
@@ -130,13 +119,20 @@ class ViewController: UIViewController {
     }
     func determinePriority() {
         
-        let randomNum = (Int)(arc4random() * 2)
-        //1 is equal to left, 0 is equal to right
-        if (randomNum == 1) {
-            whoHasPriority = 1
-        } else {
-            whoHasPriority = 0
+        let randomNum = Int.random(in: 0 ... 1)
+        if (randomNum == 0) {
+            whoHasPriority = "Left"
+        } else if (randomNum == 1) {
+            whoHasPriority = "Right"
         }
+        
+        //1 is equal to left, 0 is equal to right
+        
+        let priorityAlert = UIAlertController(title: "Priority on " + whoHasPriority!, message: "Fencer " + whoHasPriority! + "has priority", preferredStyle: UIAlertControllerStyle.alert)
+        priorityAlert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        self.present(priorityAlert, animated: true, completion: nil)
+        
+        
     }
 //    func countTime() {
 //        if (timer == nil) {
