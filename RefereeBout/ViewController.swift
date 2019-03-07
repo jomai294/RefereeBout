@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -37,11 +38,15 @@ class ViewController: UIViewController {
     //break
     var breakTimer: Timer?
     var breakTime = 60.0
+    var nonComTime = 0.0
+   
+    var touchScored = false
+    var nonComTimePrev: Int?
     
     
     @IBOutlet weak var leftScoreView: UILabel!
     @IBOutlet weak var rightScoreView: UILabel!
-    
+    @IBOutlet weak var tagView: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBAction func onMoreTapped() {
@@ -91,10 +96,17 @@ class ViewController: UIViewController {
                 timer?.invalidate()
                 timer = nil
                 //in case the view disappears it will reload
-                
                 //giveYellowLeft()
             }
-        } 
+        } else {
+            //start.setTitle("Resume", for: .normal)
+            timer?.invalidate()
+            timer = nil
+            if (period <= 3) {
+                period += 1
+            }
+        }
+        
     }
     
     @IBOutlet weak var start: UIButton!
@@ -122,8 +134,10 @@ class ViewController: UIViewController {
         let randomNum = Int.random(in: 0 ... 1)
         if (randomNum == 0) {
             whoHasPriority = "Left"
+            tagView.text = "<--"
         } else if (randomNum == 1) {
             whoHasPriority = "Right"
+            tagView.text = "-->"
         }
         
         //1 is equal to left, 0 is equal to right
@@ -252,8 +266,14 @@ class ViewController: UIViewController {
         print("Toggle sideview")
     }
     
+    func vibrate() {
+        AudioServicesPlaySystemSound(SystemSoundID(1007))
+    }
     
-    
+    func nonCombatTivityTime() {
+        //when 1 min and no score.
+        
+    }
 }
 
 
