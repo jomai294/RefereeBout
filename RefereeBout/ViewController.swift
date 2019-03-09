@@ -29,12 +29,15 @@ class ViewController: UIViewController {
     var yellowCardLeft = 0
     var redCardLeft = 0
     var blackCardLeft = 0
-    
     //number of cards for right
     var yellowCardRight = 0
     var redCardRight = 0
     var blackCardRight = 0
     
+    //number of p cards for right
+    var rightPCards = 0
+    //number of p cards for left
+    var leftPCards = 0
     //break
     var breakTimer: Timer?
     var breakTime = 60.0
@@ -240,6 +243,13 @@ class ViewController: UIViewController {
         giveRedRight()
     }
     
+    @IBAction func giveLeftP(_ sender: Any) {
+        String format = String(leftPCards) + "-P"
+    }
+    
+    @IBAction func giveRightP(_ sender: Any) {
+        String format = String(rightPCards)+ "-P"
+    }
     //function resets everything to 0.
     func reset() {
         period = 1
@@ -272,7 +282,15 @@ class ViewController: UIViewController {
     
     func nonCombatTivityTime() {
         //when 1 min and no score.
-        
+        if (time > 0) {
+            //time -= 0.1
+            //for testing
+            time -= 1
+            let timeString = timerFormat(t: time)
+            timeLabel.text = String(timeString)
+        } else {
+            
+        }
     }
 }
 
