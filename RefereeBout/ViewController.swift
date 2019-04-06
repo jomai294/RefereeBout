@@ -46,7 +46,9 @@ class ViewController: UIViewController {
     var touchScored = false
     var nonComTimePrev: Int?
     
+    @IBOutlet weak var leftPassive: UIButton!
     
+    @IBOutlet weak var rightPassive: UIButton!
     @IBOutlet weak var leftScoreView: UILabel!
     @IBOutlet weak var rightScoreView: UILabel!
     @IBOutlet weak var tagView: UILabel!
@@ -244,11 +246,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func giveLeftP(_ sender: Any) {
-        String format = String(leftPCards) + "-P"
+        leftPassive.setTitle(String(leftPCards),for:.normal)
+        if (leftPCards == 0) {
+            leftPCards = leftPCards + 1
+            leftPassive.setTitle("Y-P", for: .normal)
+            performSegue(withIdentifier: "yellowPLeft", sender: self)
+        } else if (leftPCards == 1 || leftPCards == 2) {
+            leftPCards = leftPCards + 1
+            leftPassive.setTitle("R-P", for: .normal)
+            performSegue(withIdentifier: "redPLeft", sender: self)
+        } else if (leftPCards == 3) {
+            leftPassive.setTitle("B-P", for: .normal)
+            performSegue(withIdentifier: "leftBlackP", sender: self)
+        }
     }
     
     @IBAction func giveRightP(_ sender: Any) {
-        String format = String(rightPCards)+ "-P"
+        rightPassive.setTitle(String(rightPCards),for:.normal)
     }
     //function resets everything to 0.
     func reset() {

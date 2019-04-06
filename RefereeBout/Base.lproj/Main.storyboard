@@ -192,7 +192,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-u9-rMg">
-                                <rect key="frame" x="25" y="366" width="324" height="221"/>
+                                <rect key="frame" x="25" y="341" width="324" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="startButton"/>
                                 <state key="normal" title="Resume"/>
@@ -293,21 +293,25 @@
                                     <action selector="periodButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bds-1R-wOp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-zk-3gz">
-                                <rect key="frame" x="49" y="570" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jya-TQ-MaP">
+                                <rect key="frame" x="290" y="579" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="rightPassive"/>
+                                <state key="normal" title="0-P"/>
+                                <connections>
+                                    <action selector="giveRightP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXM-s9-iEl"/>
+                                    <segue destination="Lf5-zh-IEL" kind="show" identifier="yellowPassiveRight" id="DD0-UE-tXH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-zk-3gz">
+                                <rect key="frame" x="49" y="579" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="leftPassive"/>
                                 <state key="normal" title="0-P"/>
                                 <connections>
                                     <action selector="giveLeftP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N60-6c-37L"/>
                                     <action selector="giveYellowP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keU-5V-ZIc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jya-TQ-MaP">
-                                <rect key="frame" x="290" y="570" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="0-P"/>
-                                <connections>
-                                    <action selector="giveRightP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXM-s9-iEl"/>
+                                    <segue destination="Lf5-zh-IEL" kind="show" identifier="yellowPLeft" id="muy-jW-6fj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,9 +319,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="0BV-9g-1cF"/>
                     <connections>
+                        <outlet property="leftPassive" destination="cxc-zk-3gz" id="ymG-SK-JnB"/>
                         <outlet property="leftRedButton" destination="HSf-fo-bDg" id="6nP-bE-jqr"/>
                         <outlet property="leftScoreView" destination="49W-WN-Tvk" id="Hwm-qS-siI"/>
                         <outlet property="leftYellowButton" destination="ud6-LM-DpB" id="jpT-SK-T99"/>
+                        <outlet property="rightPassive" destination="Jya-TQ-MaP" id="ieM-8g-AJC"/>
                         <outlet property="rightRedButton" destination="FTG-wN-24B" id="hje-Bz-cfU"/>
                         <outlet property="rightScoreView" destination="bGB-2R-qdQ" id="8Aa-b5-W9a"/>
                         <outlet property="rightYellowButton" destination="vAf-MY-WAq" id="o5U-yr-cb4"/>
@@ -329,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="322"/>
+            <point key="canvasLocation" x="-327" y="321"/>
         </scene>
         <!--Yellow View Controller-->
         <scene sceneID="92M-Rr-lsU">
@@ -347,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egu-jd-d6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664.8" y="-205.54722638680661"/>
+            <point key="canvasLocation" x="1054" y="-205"/>
         </scene>
         <!--Black View Controller-->
         <scene sceneID="lJZ-Vy-5Ty">
@@ -377,12 +383,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDb-xK-eDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2618" y="-206"/>
+            <point key="canvasLocation" x="1935" y="-205"/>
         </scene>
-        <!--View Controller-->
+        <!--Passive Red View Controller-->
         <scene sceneID="Yz0-6s-ilQ">
             <objects>
-                <viewController id="WTS-1d-3d2" sceneMemberID="viewController">
+                <viewController id="WTS-1d-3d2" customClass="PassiveRedViewController" customModule="RefereeBout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QCz-7s-caD"/>
                         <viewControllerLayoutGuide type="bottom" id="wxL-Ss-wIE"/>
@@ -404,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FeR-fA-M31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3613" y="-205"/>
+            <point key="canvasLocation" x="892" y="-172"/>
         </scene>
         <!--Red View Controller-->
         <scene sceneID="agJ-Mt-iz9">
@@ -422,18 +428,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ev7-I2-pdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664.8" y="583.3583208395803"/>
+            <point key="canvasLocation" x="1055" y="581"/>
         </scene>
-        <!--View Controller-->
+        <!--Passive Yellow View Controller-->
         <scene sceneID="Xeo-N8-8Lc">
             <objects>
-                <viewController id="Lf5-zh-IEL" sceneMemberID="viewController">
+                <viewController id="Lf5-zh-IEL" customClass="PassiveYellowViewController" customModule="RefereeBout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DN1-De-9Rf"/>
                         <viewControllerLayoutGuide type="bottom" id="DwY-zI-x1n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kmn-Xt-hDw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yellow P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyF-Wc-b23">
@@ -449,12 +455,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lip-Hq-iQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="583"/>
+            <point key="canvasLocation" x="1977" y="581"/>
         </scene>
-        <!--View Controller-->
+        <!--Passive Black View Controller-->
         <scene sceneID="M8a-E2-oRd">
             <objects>
-                <viewController id="L18-NE-KcD" sceneMemberID="viewController">
+                <viewController id="L18-NE-KcD" customClass="PassiveBlackViewController" customModule="RefereeBout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lbT-fu-sd8"/>
                         <viewControllerLayoutGuide type="bottom" id="6ym-Id-UcJ"/>
@@ -476,7 +482,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aa-F4-jMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3620" y="581"/>
+            <point key="canvasLocation" x="825" y="392"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="muy-jW-6fj"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52122E4F22584D3900311B51 /* PassiveYellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52122E4E22584D3900311B51 /* PassiveYellowViewController.swift */; };
+		52122E5222584D5200311B51 /* PassiveRedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52122E5122584D5200311B51 /* PassiveRedViewController.swift */; };
+		52122E5422584D5B00311B51 /* PassiveBlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52122E5322584D5B00311B51 /* PassiveBlackViewController.swift */; };
 		52718116203EBC0C00FD282B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52718115203EBC0C00FD282B /* AppDelegate.swift */; };
 		52718118203EBC0C00FD282B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52718117203EBC0C00FD282B /* ViewController.swift */; };
 		5271811B203EBC0C00FD282B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52718119203EBC0C00FD282B /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52122E4E22584D3900311B51 /* PassiveYellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiveYellowViewController.swift; sourceTree = "<group>"; };
+		52122E5122584D5200311B51 /* PassiveRedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiveRedViewController.swift; sourceTree = "<group>"; };
+		52122E5322584D5B00311B51 /* PassiveBlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiveBlackViewController.swift; sourceTree = "<group>"; };
 		52718112203EBC0C00FD282B /* RefereeBout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefereeBout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52718115203EBC0C00FD282B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52718117203EBC0C00FD282B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				52EE74D72079F61E004E5655 /* BlackViewController.swift */,
 				52949EC82091CC2F0055D700 /* SideMenuVC.swift */,
 				52949ECA2091CCDB0055D700 /* ContainerViewController.swift */,
+				52122E4E22584D3900311B51 /* PassiveYellowViewController.swift */,
+				52122E5122584D5200311B51 /* PassiveRedViewController.swift */,
+				52122E5322584D5B00311B51 /* PassiveBlackViewController.swift */,
 			);
 			path = RefereeBout;
 			sourceTree = "<group>";
@@ -153,10 +162,13 @@
 			files = (
 				52EE74D62079F488004E5655 /* RedViewController.swift in Sources */,
 				52718118203EBC0C00FD282B /* ViewController.swift in Sources */,
+				52122E5422584D5B00311B51 /* PassiveBlackViewController.swift in Sources */,
 				52949ECB2091CCDB0055D700 /* ContainerViewController.swift in Sources */,
+				52122E5222584D5200311B51 /* PassiveRedViewController.swift in Sources */,
 				52949EC92091CC2F0055D700 /* SideMenuVC.swift in Sources */,
 				52EE74D42079F3AC004E5655 /* YellowViewController.swift in Sources */,
 				52EE74D82079F61E004E5655 /* BlackViewController.swift in Sources */,
+				52122E4F22584D3900311B51 /* PassiveYellowViewController.swift in Sources */,
 				52718116203EBC0C00FD282B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
